@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowLogin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="You need to be logged in to check all the order you placed on Connect"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="SignUp"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:id="@+id/signup_button"
+            android:textColor="@color/white"
+            android:elevation="6dp"
+            android:background="@drawable/buttonui"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"/>
+
+
+        <TextView
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/login_text"
+            android:text="Have an account? Log In here"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

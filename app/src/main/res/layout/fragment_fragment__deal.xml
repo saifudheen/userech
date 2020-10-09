@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hhp.Fragment.Fragment_Deal">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_weight=".50"
+            android:id="@+id/sort"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+              android:id="@+id/arrow"
+              android:src="@drawable/updown"
+              android:scaleType="fitXY"
+              android:layout_marginLeft="@dimen/_5sdp"
+              android:layout_width="@dimen/_25sdp"
+              android:layout_height="@dimen/_25sdp" />
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Sort by:"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Popularity"
+                        android:id="@+id/sorttext"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh_layout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/sort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+
+            android:id="@+id/show_sub__cat"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

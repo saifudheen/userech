@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hhp.Fragment.Fragment_FilterSort">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RadioButton
+            android:id="@+id/lowest_item_price"
+            android:text="Lowest Item Price"
+            android:textSize="@dimen/_15sdp"
+            android:textAlignment="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="@dimen/_2sdp"/>
+
+
+        <RadioButton
+            android:id="@+id/highest_item_price"
+            android:text="Highest Item Price"
+            android:textSize="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="@dimen/_2sdp"/>
+
+
+
+        <RadioButton
+            android:id="@+id/atoz"
+            android:text=" A - Z"
+            android:textSize="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="@dimen/_2sdp"/>
+
+
+
+        <RadioButton
+            android:id="@+id/ztoa"
+            android:text="Z - A"
+            android:textSize="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="@dimen/_2sdp"/>
+
+    </RadioGroup>
+
+
+</LinearLayout>

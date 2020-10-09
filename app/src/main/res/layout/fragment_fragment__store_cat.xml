@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hhp.Fragment.Fragment_StoreCat">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+   <LinearLayout
+
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<ImageView
+
+    android:id="@+id/_full_iv"
+    android:layout_width="match_parent"
+    android:src="@drawable/icon"
+    android:scaleType="centerCrop"
+    android:layout_height="@dimen/_200sdp" />
+
+<ImageView
+    android:id="@+id/center_iv"
+    android:src="@drawable/icon"
+    android:layout_centerInParent="true"
+    android:scaleType="fitXY"
+    android:visibility="gone"
+    android:background="@drawable/bg_rounded_button"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_70sdp" />
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rl"
+        android:id="@+id/cat_l1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Categories"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13sdp"
+        android:layout_height="wrap_content" />
+
+<RelativeLayout
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:id="@+id/seeall"
+            android:text="See All"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp" />
+</RelativeLayout>
+    </LinearLayout>
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+
+            android:id="@+id/show_cat"
+            app:shimmer_demo_layout_manager_type="linear_horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/cat_l1"
+
+            android:layout_height="wrap_content">
+
+        </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_img_slider"
+                android:layout_below="@+id/show_cat"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_width="match_parent"
+
+                android:layout_margin="@dimen/_5sdp" />
+
+
+
+
+
+    </RelativeLayout>
+
+       <LinearLayout
+           android:layout_below="@+id/iv"
+           android:id="@+id/cat_l2"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="Best Deals"
+               android:paddingLeft="10dp"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_12sdp"
+               android:layout_height="wrap_content" />
+
+
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:orientation="horizontal"
+           android:weightSum="1"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <Button
+               android:layout_width="0dp"
+               android:id="@+id/discount"
+               android:layout_weight=".48"
+               android:foregroundGravity="center_horizontal"
+               android:background="@drawable/bestbg"
+               android:layout_marginLeft="@dimen/_10sdp"
+               android:layout_height="@dimen/_50sdp" />
+
+           <Button
+               android:layout_width="0dp"
+               android:layout_weight=".48"
+               android:id="@+id/free"
+               android:background="@drawable/free"
+               android:layout_marginLeft="@dimen/_10sdp"
+               android:layout_height="@dimen/_50sdp" />
+
+       </LinearLayout>
+
+           <android.support.v4.view.ViewPager
+               android:id="@+id/banner_slider"
+               android:visibility="visible"
+               android:layout_width="match_parent"
+               android:layout_marginTop="@dimen/_15sdp"
+               android:layout_height="@dimen/_120sdp"
+               android:layout_margin="@dimen/_5sdp" />
+
+
+
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:text="Recommended For You"
+           android:paddingLeft="10dp"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:textColor="@color/black"
+           android:textSize="@dimen/_14sdp"
+           android:layout_height="wrap_content" />
+
+       <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+
+           android:id="@+id/recoomend_product"
+           app:shimmer_demo_layout_manager_type="linear_horizontal"
+           android:layout_width="match_parent"
+           android:layout_marginTop="@dimen/_5sdp"
+           android:layout_below="@+id/cat_l1"
+
+           android:layout_height="wrap_content">
+
+       </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+   </LinearLayout>
+
+    </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

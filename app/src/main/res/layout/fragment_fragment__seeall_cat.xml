@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hhp.Fragment.Fragment_Seeall_cat">
+
+    <!-- TODO: Update blank fragment layout -->
+   <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+       android:id="@+id/show_cat"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+
+   </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+</RelativeLayout>

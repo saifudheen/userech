@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="0dp">
+<View
+
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="2dp"/>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/cl"
+        android:paddingBottom="5sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_subcat_img"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            app:civ_border_color="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/iv_subcat_img"
+            app:layout_constraintRight_toLeftOf="@+id/iv_subcat_minus"
+            app:layout_constraintTop_toTopOf="@+id/iv_subcat_img">
+
+            <TextView
+                android:id="@+id/tv_subcat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_subcat_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#837e7e"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="Rs."
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tv_subcat_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" TextView"
+                    android:textColor="#000"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_marginBottom="3dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/slider_shape"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:text="Rewards Points "-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="8dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_reward_point"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="4dp"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="8dp" />-->
+
+
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_subcat_plus"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/tv_subcat_contetiy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_subcat_plus"
+            app:layout_constraintRight_toLeftOf="@+id/iv_subcat_plus"
+            app:layout_constraintTop_toTopOf="@+id/iv_subcat_plus" />
+
+        <ImageView
+            android:id="@+id/iv_subcat_minus"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_subcat_plus"
+            app:layout_constraintRight_toLeftOf="@+id/tv_subcat_contetiy"
+            app:layout_constraintTop_toTopOf="@+id/iv_subcat_plus"
+            app:srcCompat="@drawable/minus" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_subcat_add"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:background="@drawable/bg_rounded_button"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/_10sdp"-->
+            <!--android:text="Add"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="8dp"-->
+            <!--app:layout_constraintLeft_toLeftOf="@+id/iv_subcat_minus"-->
+            <!--app:layout_constraintRight_toRightOf="@+id/iv_subcat_plus"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/iv_subcat_plus" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_subcat_remove"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:srcCompat="@drawable/ic_close" />-->
+
+    </android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_below="@+id/cl"
+        android:layout_height="2dp"/>
+
+</RelativeLayout>
